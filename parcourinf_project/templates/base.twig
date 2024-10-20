@@ -1,0 +1,29 @@
+{# base.twig #}
+<!DOCTYPE html>
+<html>
+  {% include 'head.twig' %}
+  <body>
+    {% include 'header.twig' %}
+
+    <div class="fr-px-3w fr-container fr-container--fluid">
+      <nav role="navigation" class="fr-breadcrumb" aria-label="vous êtes ici :">
+        <button class="fr-breadcrumb__button" aria-expanded="false" aria-controls="breadcrumb-1">Voir le fil d'Ariane</button>
+        <div class="fr-collapse" id="breadcrumb-1">
+          <ol class="fr-breadcrumb__list">
+            <li>
+              <a class="fr-breadcrumb__link" href="/">Accueil</a>
+            </li>
+          </ol>
+        </div>
+      </nav>
+    </div>
+
+    <main class="fr-pt-md-1v fr-px-3w">
+      <div class="fr-container fr-container--fluid fr-mb-md-14v">
+        {% block content %}
+          Contenu par défaut
+        {% endblock %}
+      </div>
+    </main>
+  </body>
+</html>
