@@ -1,4 +1,5 @@
 {# base.twig #}
+
 <!DOCTYPE html>
 <html>
   {% include 'head.twig' %}
@@ -10,9 +11,11 @@
         <button class="fr-breadcrumb__button" aria-expanded="false" aria-controls="breadcrumb-1">Voir le fil d'Ariane</button>
         <div class="fr-collapse" id="breadcrumb-1">
           <ol class="fr-breadcrumb__list">
-            <li>
-              <a class="fr-breadcrumb__link" href="/">Accueil</a>
-            </li>
+            {% block arianeLinks %}
+              <li>
+                <a class="fr-breadcrumb__link" href="/">Acceuil</a>
+              </li>
+            {% endblock %}
           </ol>
         </div>
       </nav>

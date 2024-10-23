@@ -1,4 +1,9 @@
 {% extends 'base.twig' %}
+{% load ariane %}
+
+{% block arianeLinks %}
+  {% lien_ariane 'Acceuil' %}
+{% endblock %}
 
 {% block content %}
   <h1>Bienvenu sur Parcoursinf</h1>
